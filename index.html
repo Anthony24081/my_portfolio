@@ -92,6 +92,7 @@
             try {
                 let response = await fetch('https://my-portfolio-backend-zg6v.onrender.com/run-script', { method: 'POST' });
                 
+                
                 let data = await response.json();
                 
                 if (data.success) {
