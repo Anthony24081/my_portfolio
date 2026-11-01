@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anthony | Full-Stack Portfolio</title>
+    <title>Anthony Ogunsanwo | Portfolio</title>
     <style>
         * {
             box-sizing: border-box;
@@ -20,24 +20,60 @@
             min-height: 100vh;
             padding: 20px;
         }
-        .card {
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+        .profile-card {
             background: #1e293b;
             border-radius: 12px;
             padding: 24px;
-            max-width: 500px;
-            width: 100%;
+            margin-bottom: 20px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
             border: 1px solid #334155;
         }
         h1 {
-            font-size: 1.5rem;
-            margin-bottom: 8px;
+            font-size: 1.8rem;
             color: #38bdf8;
+            margin-bottom: 6px;
         }
-        p.subtitle {
+        .tagline {
             color: #94a3b8;
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+        }
+        .details-list {
+            list-style: none;
+            border-top: 1px solid #334155;
+            padding-top: 12px;
+        }
+        .details-list li {
             font-size: 0.9rem;
-            margin-bottom: 20px;
+            color: #cbd5e1;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .details-list span {
+            color: #38bdf8;
+            font-weight: 600;
+        }
+        .dashboard-card {
+            background: #1e293b;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            border: 1px solid #334155;
+        }
+        .dashboard-card h2 {
+            font-size: 1.3rem;
+            margin-bottom: 6px;
+            color: #f8fafc;
+        }
+        .dashboard-card p.subtitle {
+            color: #94a3b8;
+            font-size: 0.85rem;
+            margin-bottom: 16px;
         }
         button {
             width: 100%;
@@ -55,7 +91,7 @@
             background-color: #0369a1;
         }
         #output {
-            margin-top: 20px;
+            margin-top: 16px;
             background-color: #090d16;
             padding: 15px;
             border-radius: 6px;
@@ -70,13 +106,28 @@
 </head>
 <body>
 
-<div class="card">
-    <h1>System Dashboard</h1>
-    <p class="subtitle">Full-Stack Endpoint Metrics</p>
-    
-    <button onclick="runAudit()">Run Security Audit</button>
+<div class="container">
+    <!-- Personal Details Header Card -->
+    <div class="profile-card">
+        <h1>Anthony Ogunsanwo</h1>
+        <p class="tagline">Cybersecurity & Software Development</p>
+        
+        <ul class="details-list">
+            <li><strong>Matric Number:</strong> <span>Cyb/2025/1095</span></li>
+            <li><strong>Faculty:</strong> <span>Faculty of Computing</span></li>
+            <li><strong>Course:</strong> <span>COS 201</span></li>
+        </ul>
+    </div>
 
-    <div id="output">> Ready to execute server routine...</div>
+    <!-- Live System Metrics Dashboard Card -->
+    <div class="dashboard-card">
+        <h2>System Dashboard</h2>
+        <p class="subtitle">Full-Stack Render Backend Metrics</p>
+        
+        <button onclick="runAudit()">Run Security Audit</button>
+
+        <div id="output">> Ready to execute server routine...</div>
+    </div>
 </div>
 
 <script>
