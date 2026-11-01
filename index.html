@@ -90,7 +90,7 @@
             outputDiv.innerText = "> Connecting to Python backend...";
             
             try {
-                let response = await fetch('/run-script', { method: 'POST' });
+                 let response = await fetch('https://my-portfolio-backend-zg6v.onrender.com/run-script', { method: 'POST' });
                 let data = await response.json();
                 
                 if (data.success) {
@@ -105,3 +105,5 @@
     </script>
 </body>
 </html>
+
+
