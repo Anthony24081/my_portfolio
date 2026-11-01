@@ -98,8 +98,6 @@
                 
                 
                     outputDiv.innerText = data.output;
-                } else {
-                    outputDiv.innerText = "> Error: " + data.output;
                 }
             } catch (err) {
                 outputDiv.innerText = "> Local backend server not running.\n> Note: Static GitHub Pages hosts HTML frontend. Connect local Flask server for live script processing.";
@@ -108,5 +106,6 @@
     </script>
 </body>
 </html>
+
 
 
